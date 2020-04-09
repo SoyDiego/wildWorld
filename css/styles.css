@@ -1,0 +1,197 @@
+:root {
+	--black: #000000;
+	--white: #ffffff;
+	--purple: #20222b;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	color: var(--white);
+}
+
+.container {
+	width: 100%;
+	overflow: hidden;
+}
+/* De Derecha a Izquierda */
+.skew-arriba {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-width: 20vh 0 0 100vw;
+	border-style: solid;
+	border-color: var(--white) transparent transparent transparent;
+	z-index: 999;
+}
+
+.skew-abajo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-width: 0 0 15vh 100vw;
+	border-style: solid;
+	border-color: transparent transparent var(--white) transparent;
+}
+
+/* HEADER */
+
+header {
+	width: 100%;
+	height: 90vh;
+	background: #ff0099; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+			to right,
+			hsla(323, 19%, 24%, 0.507),
+			hsla(324, 100%, 50%, 0.507)
+		),
+		url(../img/2.jpg); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+			to right,
+			hsla(323, 19%, 24%, 0.507),
+			hsla(324, 100%, 50%, 0.507)
+		),
+		url(../img/2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+}
+
+span {
+	font-weight: bolder;
+}
+
+.container-menu {
+	display: flex;
+	justify-content: end;
+	padding-right: 60px;
+}
+
+nav > ul > li {
+	display: inline-block;
+	padding: 20px;
+	font-weight: bold;
+}
+
+.container-header-text {
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-header-text h1 {
+	font-size: 60px;
+}
+
+.wave {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+/* FIN HEADER */
+
+/* GALLERY */
+.container-gallery {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	background: url(../img/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 200px 0;
+}
+
+.gallery {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.picture {
+	width: 24%;
+	margin-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gallery .picture > img {
+	width: 100%;
+	height: 100%;
+}
+
+.picture-hover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+	transition: transform 1s ease;
+	background: hsla(273, 91%, 27%, 0.6);
+}
+
+.picture:hover .picture-hover {
+	transform: scale(1);
+}
+
+.picture-hover p {
+	margin-top: 30px;
+	text-align: center;
+}
+/* FIN GALLERY */
+
+/* FOOTER */
+footer {
+	position: relative;
+}
+
+.wave-footer {
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+footer .container-footer {
+	background: #ff0099; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+			to right,
+			hsla(323, 19%, 24%, 0.507),
+			hsla(324, 100%, 50%, 0.507)
+		),
+		url(../img/2.jpg); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+			to right,
+			hsla(323, 19%, 24%, 0.507),
+			hsla(324, 100%, 50%, 0.507)
+		),
+		url(../img/2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 200px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 100px;
+}
+
+/* FIN FOOTER */
